@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import PageTitle from '../../Components/PageTitle/PageTitle';
+
 import { AuthOperations } from '../../redux/Auth';
 
 class RegisterView extends Component {
@@ -22,8 +25,8 @@ class RegisterView extends Component {
     render() {
         const {name, email, password} = this.state;
         return (
-            <div>
-                <h2>Register page</h2>
+            <>
+                <PageTitle text='Register page' />
                 <form onSubmit={this.handleSubmit} >
                     <label>
                     Name
@@ -31,7 +34,8 @@ class RegisterView extends Component {
                         type='name'
                         name='name'
                         value={name}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        required />
                     </label>
                     <label>
                     Email
@@ -39,7 +43,8 @@ class RegisterView extends Component {
                         type='email'
                         name='email'
                         value={email}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        required />
                     </label>
                     <label>
                     Password
@@ -47,10 +52,11 @@ class RegisterView extends Component {
                         type='password'
                         name='password'
                         value={password}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        required />
                     </label>
                 </form>
-            </div>
+            </>
         );
     }
 };

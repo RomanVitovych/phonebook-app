@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import Load from '../../Components/Load/Load';
 import { connect } from 'react-redux';
-import AlertMessage from '../../Components/AlertMessage/AlertMessage';
-import ContactsForm from '../../Components/ContactsForm/ContactsForm';
-import Filter from '../../Components/Filter/Filter';
-import ContactsList from '../../Components/ContactsList/ContactsList';
+
+// import Load from '../../Components/Load/Load';
+// import AlertMessage from '../../Components/AlertMessage/AlertMessage';
+// import ContactsForm from '../../Components/ContactsForm/ContactsForm';
+// import Filter from '../../Components/Filter/Filter';
+// import ContactsList from '../../Components/ContactsList/ContactsList';
+import BookContainer from '../../Components/Book/BookContainer';
+
 import { contactsOperations, contactsSelectors } from '../../redux/Contacts';
 
 class ContactsView extends Component {
@@ -14,13 +17,14 @@ class ContactsView extends Component {
     
     render() {
         return (
-            <div>
-                {isLoadingContacts && <Load />}
+            <>
+                {/* {this.isLoadingContacts && <Load />}
                 <AlertMessage />
                 <ContactsForm />    
                 <Filter />
-                <ContactsList />
-            </div>
+                <ContactsList /> */}
+                <BookContainer />
+            </>
         );
     };
 };

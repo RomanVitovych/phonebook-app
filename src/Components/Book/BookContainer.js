@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import Book from './Book';
+
 import contactsOperations from '../../redux/Contacts/contactsOperations';
 import contactsSelectors from '../../redux/Contacts/contactsSelectors';
 

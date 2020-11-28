@@ -1,8 +1,14 @@
 const isAuthenticated = state => state.auth.token;
 
-const getUserName = state => state.auth.name;
+const getUserName = state => state.auth.user.name;
+
+const getUserEmail = state => state.auth.user.email;
+
+const getError = state => state.auth.error;
 
 export default {
     isAuthenticated,
-    getUserName
+    getUserName,
+    getUserEmail,
+    getError
 };
